@@ -3,3 +3,11 @@
     name: discord
     state: present
   become: yes
+
+# There has been error in some case because of this, keeping it commented
+#- name: TW dependency for discord
+#  package:
+#    name: libatomic1
+#    state: present
+#  become: yes
+#  when: distro=="tw"
