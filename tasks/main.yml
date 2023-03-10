@@ -1,0 +1,23 @@
+---
+#######################################
+##### Load vars for distros
+#######################################
+
+- include_vars: vars/arch.yml
+  when: distro=="arch"
+
+- include_vars: vars/tw.yml
+  when: distro=="tw"
+
+- include_vars: vars/neon.yml
+  when: distro=="neon"
+
+# tasks file for gaming
+- name: Install gaming platforms
+  include_tasks: platforms/main.yml
+
+- name: Install discord
+  include_tasks: discord/main.yml
+
+- name: Install rolisteam
+  include_tasks: rolisteam.yml

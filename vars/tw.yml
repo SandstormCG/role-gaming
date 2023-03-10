@@ -1,0 +1,3 @@
+wine_deps: ["wine","winetricks"]
+
+gaming_apps: ["retroarch","steam","lutris"]
